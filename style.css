@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
 
 :root {
     --lightGrey : #f7f1ed;
@@ -36,21 +37,6 @@ a, a:hover, a:focus, a:active {
     height: 50px;
 }
 
-.lightGrey {
-    background-color: var(--lightGrey);
-}
-
-.orangePink {
-    background-color: var(--orangePink);
-}
-
-.green {
-    background-color: var(--green);
-}
-
-.blueViolet {
-    background-color: var(--blueViolet);
-}
 
 .header {
     display: flex;
@@ -61,6 +47,13 @@ a, a:hover, a:focus, a:active {
     height: auto;
     padding: 20px 0;
 
+}
+
+.logo {
+    font-family: 'Petit Formal Script', cursive;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 .sticky {
@@ -111,9 +104,8 @@ a, a:hover, a:focus, a:active {
     padding-left: 70px;*/
     /*background-color: var(--orangePink);*/
     /*background-image: url('images/samantha-gades-BlIhVfXbi9s-unsplash.jpg');*/
-    background-position: 100%;
     width: 100%;
-    height: 90vh;
+    height: 70vh;
     background-size: cover;
     position: relative;
     display: flex;
@@ -122,22 +114,25 @@ a, a:hover, a:focus, a:active {
 }
 
 .hero-img {
-    width: 100%;
     text-align: center;
-    height: 100vh;
     opacity: 0.5;
 }
 
 .hero-wrapper {
-    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 30px;
     position: absolute;
-    top: 140px;
-    left: 90px;
+    top: 40px;
+}
+
+.presentation {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 .presentation-wrap {
@@ -149,18 +144,8 @@ a, a:hover, a:focus, a:active {
 .hero-title {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 60%;
+    justify-content: space-around;
     margin-bottom: 30px;
-}
-
-
-.presentation {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
 }
 
 .pres-title {
@@ -168,25 +153,18 @@ a, a:hover, a:focus, a:active {
 }
 
 .hero-title h1 {
-    font-size: 3.2em;
+    font-size: 2.2em;
     font-family: var(--fontTitle);
     letter-spacing: 3px;
     color: var(--green);
-    margin-bottom: 30px;
-}
-
-.pres-title h3 {
-    font-size: 2rem;
-    letter-spacing: 2px;
-    color: var(--orangePink);
+    margin-bottom: 10px;
 }
 
 .hero-text {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     margin-bottom: 30px;
     color: var(--blueViolet);
-    width: 80%;
 }
 
 .hero-text span {
@@ -196,7 +174,6 @@ a, a:hover, a:focus, a:active {
 }
 
 .techno {
-    text-align: center;
     color: var(--green);
     font-weight: bold;
     font-size: 1.5rem;
@@ -204,7 +181,6 @@ a, a:hover, a:focus, a:active {
 }
 
 .cta {
-    width: 50%;
     line-height: 2;
     text-align: center;
 }
@@ -252,15 +228,18 @@ a, a:hover, a:focus, a:active {
 }
 
 .about-wrap {
-    width: 70%;
     padding: 30px;
 }
 
 .about-me {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 0 40px;
+}
+
+.about-me img {
+    margin-bottom: 20px;
 }
 
 .about-me h1 {
@@ -269,15 +248,13 @@ a, a:hover, a:focus, a:active {
 }
 
 .about-me p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     line-height: 1.4;
     font-weight: 300;
     text-align: justify;
-    width: 50%;
 }
 
 .main-wrap {
-    width: 80%;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -298,17 +275,17 @@ a, a:hover, a:focus, a:active {
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 20px;
-    width: 90%;
+    width: 100%;
 }
 
 .link {
     min-width: 30%;
     margin: 10px;
-    border: 1px solid firebrick;
 }
 
 .portofolio {
-    height: 400px;
+    height: 200px;
+    width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -377,11 +354,31 @@ a, a:hover, a:focus, a:active {
     background-size: cover;
 }
 
+footer {
+    height: auto;
+    background-color: var(--green);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.footer-text {
+    font-size: 1.4rem;
+    text-align: center;
+}
 
 .contact {
     display: flex;
     justify-content: center;
-    width: 70%;
+    width: 100%;
 }
 
 .contact-wrap {
@@ -389,10 +386,9 @@ a, a:hover, a:focus, a:active {
     justify-content: center;
     border-radius: 20px;
     line-height: 3;
-    width: 50%;
+    width: 100%;
     padding: 15px;
     margin: 20px 0;
-
 }
 
 .form {
@@ -457,25 +453,7 @@ form {
     width: 80%;
 }
 
-footer {
-    height: auto;
-    background-color: var(--green);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.footer {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
-
-.footer-text {
-    font-size: 1.8rem;
-}
 
 
 /* ----------- RESPONSIVE DESIGN ----------- */
