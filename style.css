@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+
+:root {
+    --lightGrey : #f7f1ed;
+    --orangePink: #febeb0;
+    --green : #3d5a5b;
+    --blueViolet:#2f365f;
+    --whiteColor : #fff;
+    --black: #000;
+    --fontText: 'Poppins', sans-serif;
+    --fontTitle : 'Rubik', sans-serif
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fontTitle);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fontText)
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.palette {
+    width: 100px;
+    height: 50px;
+}
+
+.lightGrey {
+    background-color: var(--lightGrey);
+}
+
+.orangePink {
+    background-color: var(--orangePink);
+}
+
+.green {
+    background-color: var(--green);
+}
+
+.blueViolet {
+    background-color: var(--blueViolet);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    background-color: var(--lightGrey);
+    height: auto;
+    padding: 20px 0;
+
+}
+
+.sticky {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    height: 100px;
+    top: 0;
+    width: 100%;
+    background-color: var(--lightGrey);
+    opacity: 0.8;
+    z-index: 1;
+}
+
+
+.menu {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    height: 3rem;
+}
+
+.menu-list {
+    list-style: none;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.menu-list li {
+    transition: all 0.3s;
+    padding: 10px 20px;
+}
+
+.menu-list li:hover {
+    cursor: pointer;
+    color: var(--lightGrey);
+    background-color: var(--green);
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.hero {
+    /*padding-top: 70px;
+    padding-right: 70px;
+    padding-left: 70px;*/
+    /*background-color: var(--orangePink);*/
+    /*background-image: url('images/samantha-gades-BlIhVfXbi9s-unsplash.jpg');*/
+    background-position: 100%;
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    text-align: center;
+    height: 100vh;
+    opacity: 0.5;
+}
+
+.hero-wrapper {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    position: absolute;
+    top: 140px;
+    left: 90px;
+}
+
+.presentation-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.hero-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    margin-bottom: 30px;
+}
+
+
+.presentation {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pres-title {
+    margin-bottom: 30px;
+}
+
+.hero-title h1 {
+    font-size: 3.2em;
+    font-family: var(--fontTitle);
+    letter-spacing: 3px;
+    color: var(--green);
+    margin-bottom: 30px;
+}
+
+.pres-title h3 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: var(--orangePink);
+}
+
+.hero-text {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: var(--blueViolet);
+    width: 80%;
+}
+
+.hero-text span {
+    color: var(--green);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.techno {
+    text-align: center;
+    color: var(--green);
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.cta {
+    width: 50%;
+    line-height: 2;
+    text-align: center;
+}
+
+.cta button {
+    width: 100%;
+    font-family: var(--fontText);
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: var(--blueViolet);
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 15px;
+
+}
+
+.cta button:hover {
+    cursor: pointer;
+    background-color: antiquewhite;
+    color: lightcoral;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    margin: 50px 0;
+}
+
+.about h1 {
+    font-size: 3.2em;
+    font-family: var(--fontTitle);
+    letter-spacing: 3px;
+    color: var(--green);
+    margin-bottom: 30px;
+}
+
+.about-wrap {
+    width: 70%;
+    padding: 30px;
+}
+
+.about-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 40px;
+}
+
+.about-me h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-me p {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    font-weight: 300;
+    text-align: justify;
+    width: 50%;
+}
+
+.main-wrap {
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-wrap h1 {
+    font-size: 3.2em;
+    font-family: var(--fontTitle);
+    letter-spacing: 3px;
+    color: var(--green);
+    margin-bottom: 30px;
+}
+
+.realisation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+    width: 90%;
+}
+
+.link {
+    min-width: 30%;
+    margin: 10px;
+    border: 1px solid firebrick;
+}
+
+.portofolio {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.4s;
+}
+
+
+.portofolio:hover{
+    cursor: pointer;
+    opacity: 0.5;
+} 
+
+.portofolio-title{
+    text-align: center;
+    background-color: var(--lightGrey);
+    width: 100%;
+    height: 100px;
+    color: var(--blueViolet);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-portofolio {
+    font-size: 2.1rem;
+}
+
+.show-title {
+    opacity: 1;
+}
+
+.site1 {
+    background-image: url('images/boulangerie.jfif');
+    background-position: center center;
+    background-size: cover;
+}
+
+.site2 {
+    background-image: url('images/transport.webp');
+    background-position: center center;
+    background-size: cover;
+}
+
+.site3 {
+    background-image: url('images/plombier.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+.site4 {
+    background-image: url('images/Restaurant.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+.site5 {
+    background-image: url('images/industrie.jpeg');
+    background-position: center center;
+    background-size: cover;
+}
+
+.site6 {
+    background-image: url('images/agence.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+
+.contact {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+}
+
+.contact-wrap {
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    line-height: 3;
+    width: 50%;
+    padding: 15px;
+    margin: 20px 0;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+input {
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1.5px solid var(--orangePink);
+    outline: none;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-family: var(--fontText);
+    margin-bottom: 30px;
+}
+
+textarea {
+    border-radius: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1.5px solid var(--orangePink);
+    outline: none;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-family: var(--fontText);
+}
+
+.contact-btn {
+    text-align: center;
+    margin: 50px;
+}
+
+.contact-btn input {
+    height: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 15px;
+    background-color: lightcoral;
+    border: none;
+    border-radius: 30px;
+    width: 80%;
+    color: #ffffff;
+}
+
+.contact-btn input:hover {
+    cursor: pointer;
+    background-color: antiquewhite;
+    color: lightcoral;
+}
+
+form {
+    width: 80%;
+}
+
+footer {
+    height: auto;
+    background-color: var(--green);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.footer-text {
+    font-size: 1.8rem;
+}
+
+
+/* ----------- RESPONSIVE DESIGN ----------- */
+/*Important: Always put your media queries at the end of your CSS file.*/
+
+/* Small devices (landscape phones, 576px and up) */
+
+/* Mobile first --> min-width sinon maw-width */
+
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up)*/
+
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {}
