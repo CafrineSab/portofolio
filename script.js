@@ -5,7 +5,7 @@ console.log(window.pageYOffset)
 console.log(stickyMenu)
 
 function myFunction() {
-    if (window.pageYOffset >= 100) {
+    if (window.pageYOffset >= 60) {
       stickyMenu.classList.add("sticky")
     } else {
       stickyMenu.classList.remove("sticky")

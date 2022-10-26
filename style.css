@@ -73,11 +73,10 @@ a, a:hover, a:focus, a:active {
     align-items: center;
     justify-content: space-around;
     position: fixed;
-    height: 100px;
+    height: 50px;
     top: 0;
     width: 100%;
-    background-color: var(--lightGrey);
-    opacity: 0.8;
+    background-color: var(--black);
     z-index: 1;
 }
 
