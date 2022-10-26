@@ -16,6 +16,13 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--fontTitle);
 }
 
+h1 {
+    font-size: 2.2em;
+    font-family: var(--fontTitle);
+    letter-spacing: 3px;
+    color: var(--green);
+    margin-bottom: 10px;
+}
 
 *{
     margin: 0;
@@ -32,21 +39,25 @@ a, a:hover, a:focus, a:active {
     color: inherit;
 }
 
-.palette {
-    width: 100px;
-    height: 50px;
-}
-
 
 .header {
     display: flex;
+    background-image:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.7)), url('images/bg-hero4.jpg');
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    background-color: var(--lightGrey);
+    background-color: transparent;
     height: auto;
     padding: 20px 0;
+}
 
+.menu-wrap {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .logo {
@@ -54,6 +65,7 @@ a, a:hover, a:focus, a:active {
     font-weight: bold;
     font-size: 1.2rem;
     text-align: center;
+    color: var(--orangePink);
 }
 
 .sticky {
@@ -88,6 +100,7 @@ a, a:hover, a:focus, a:active {
 .menu-list li {
     transition: all 0.3s;
     padding: 10px 20px;
+    color: var(--whiteColor);
 }
 
 .menu-list li:hover {
@@ -99,11 +112,6 @@ a, a:hover, a:focus, a:active {
 }
 
 .hero {
-    /*padding-top: 70px;
-    padding-right: 70px;
-    padding-left: 70px;*/
-    /*background-color: var(--orangePink);*/
-    /*background-image: url('images/samantha-gades-BlIhVfXbi9s-unsplash.jpg');*/
     width: 100%;
     height: 70vh;
     background-size: cover;
@@ -150,14 +158,6 @@ a, a:hover, a:focus, a:active {
 
 .pres-title {
     margin-bottom: 30px;
-}
-
-.hero-title h1 {
-    font-size: 2.2em;
-    font-family: var(--fontTitle);
-    letter-spacing: 3px;
-    color: var(--green);
-    margin-bottom: 10px;
 }
 
 .hero-text {
@@ -219,14 +219,6 @@ a, a:hover, a:focus, a:active {
     margin: 50px 0;
 }
 
-.about h1 {
-    font-size: 3.2em;
-    font-family: var(--fontTitle);
-    letter-spacing: 3px;
-    color: var(--green);
-    margin-bottom: 30px;
-}
-
 .about-wrap {
     padding: 30px;
 }
@@ -239,11 +231,6 @@ a, a:hover, a:focus, a:active {
 }
 
 .about-me img {
-    margin-bottom: 20px;
-}
-
-.about-me h1 {
-    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
@@ -260,14 +247,6 @@ a, a:hover, a:focus, a:active {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-}
-
-.main-wrap h1 {
-    font-size: 3.2em;
-    font-family: var(--fontTitle);
-    letter-spacing: 3px;
-    color: var(--green);
-    margin-bottom: 30px;
 }
 
 .realisation {
@@ -467,7 +446,80 @@ form {
 
 /* Medium devices (tablets, 768px and up) */
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2.8em;
+    }
+
+    .hero {
+        width: 100%;
+        height: 60vh;
+    }
+
+    .cta button {
+        width: 100%;
+    }
+
+    .presentation {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 30px;
+        align-items: center;
+    }
+        
+    .presentation-wrap {
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+    }
+
+    .pres-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-title {
+        width: 80%;
+    }
+
+    .hero-text {
+        text-align: center;
+        font-size: 1.6rem;
+    }
+    
+    .hero-text span {
+        font-size: 1.8rem;
+    }
+    
+    .techno {
+        font-size: 1.8rem;
+    }
+
+    .about-wrap {
+        display: flex;
+        justify-content: center ;
+    }
+
+    .about-me {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+    }
+
+    .about-me p {
+        width: 50%;
+        text-align: left;
+    }
+
+    .footer-text {
+        font-size: 1.8rem;
+    }
+    
+    .contact {
+        width: 80%;
+    }
+}
 
 /* Large devices (desktops, 992px and up)*/
 
@@ -475,4 +527,98 @@ form {
 
 /* Extra large devices (large desktops, 1200px and up) */
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 3.2em;
+    }
+
+    .hero {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .cta button {
+        width: 100%;
+        font-size: 2.4rem;
+        border-radius: 15px;
+        color: #ffffff;
+        padding: 20px 45px;
+    }
+
+    .presentation {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 30px;
+        align-items: center;
+    }
+        
+    .presentation-wrap {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+    }
+
+    .pres-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-title {
+        width: 60%;
+    }
+
+    .hero-text {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    
+    .hero-text span {
+        font-size: 2.1rem;
+    }
+    
+    .techno {
+        font-size: 2.1rem;
+    }
+
+    .about-wrap {
+        display: flex;
+        justify-content: center ;
+        border: 1px solid red;
+    }
+
+    .about-me {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        border: 1px solid purple;
+    }
+
+    .about-me p {
+        width: 50%;
+        text-align: left;
+        margin-left: 30px;
+    }
+
+    .footer-text {
+        font-size: 1.8rem;
+    }
+    
+    .contact {
+        width: 60%;
+    }
+
+    .contact-btn input {
+        height: 70px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.1rem;
+        margin: 15px;
+        background-color: lightcoral;
+        border-radius: 20px;
+        width: 80%;
+        color: #ffffff;
+    }
+}
+
