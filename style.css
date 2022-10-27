@@ -434,6 +434,8 @@ form {
 
 
 
+
+
 /* ----------- RESPONSIVE DESIGN ----------- */
 /*Important: Always put your media queries at the end of your CSS file.*/
 
@@ -522,18 +524,14 @@ form {
 
 /* Large devices (desktops, 992px and up)*/
 
-@media (min-width: 992px) {}
-
-/* Extra large devices (large desktops, 1200px and up) */
-
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
     h1 {
         font-size: 3.2em;
     }
 
     .hero {
         width: 100%;
-        height: 100vh;
+        height: 70vh;
     }
 
     .cta button {
@@ -601,6 +599,14 @@ form {
         margin-left: 30px;
     }
 
+    .realisation {
+        width: 80%;
+    }
+
+    .portofolio {
+        height: 300px;
+    }
+
     .footer-text {
         font-size: 1.8rem;
     }
@@ -621,3 +627,14 @@ form {
     }
 }
 
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+    .realisation {
+        width: 80%;
+    }
+
+    .portofolio {
+        height: 300px;
+    }
+}
