@@ -1,11 +1,11 @@
 //------ STICKY MENU --------------
 let stickyMenu = document.querySelector('.menu-wrap');
 
-console.log(window.pageYOffset)
+console.log(window.scrollY)
 console.log(stickyMenu)
 
 function myFunction() {
-    if (window.pageYOffset >= 60) {
+    if (window.scrollY >= 70) {
       stickyMenu.classList.add("sticky")
     } else {
       stickyMenu.classList.remove("sticky")
