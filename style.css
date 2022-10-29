@@ -399,7 +399,7 @@ input {
     border-radius: 10px;
     border: none;
     background-color: transparent;
-    border-bottom: 1.5px solid var(--orangePink);
+    border-bottom: 1.5px solid var(--orange);
     outline: none;
     padding: 10px;
     font-size: 1.1rem;
@@ -411,7 +411,7 @@ textarea {
     border-radius: 10px;
     background-color: transparent;
     border: none;
-    border-bottom: 1.5px solid var(--orangePink);
+    border-bottom: 1.5px solid var(--orange);
     outline: none;
     padding: 10px;
     font-size: 1.1rem;
@@ -429,17 +429,16 @@ textarea {
     font-size: 1rem;
     font-weight: bold;
     margin: 15px;
-    background-color: lightcoral;
     border: none;
     border-radius: 30px;
     width: 80%;
-    color: #ffffff;
+    background-color: var(--orange) !important;
 }
 
 .contact-btn input:hover {
     cursor: pointer;
-    background-color: antiquewhite;
-    color: lightcoral;
+    background-color: var(--orangePink) !important;
+    transition: background-color 0.4s;
 }
 
 form {
