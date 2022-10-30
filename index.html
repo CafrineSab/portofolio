@@ -18,7 +18,7 @@
                 <ul class="menu-list">
                     <li><a href="#mes-realisations">Portofolio</a></li>
                     <li>Menu</li>
-                    <li class="menu-list-contact">CONTACT</li>
+                    <li class="menu-list-contact"><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
@@ -123,19 +123,19 @@
         </div>
     </section>
 
-    <footer>
+    <footer id="contact">
         <div class="footer-img">
             <img src="images/thankyou.png" width="250px" alt="">
         </div>
         <div>
             <p class="footer-text">N'hésitez pas à me contacter, je suis à votre disposition pour plus d'informations.</p>
         </div>
-        <section class="contact">
+        <section  class="contact">
             <div class="contact-wrap">
                 <form action="">
                     <div class="form">
                         <label for="">Nom</label>
-                        <input type="text" name="" id="">
+                        <input type="text" name="" id="name">
                     </div>
                     <div class="form">
                         <label for="">Email</label>
@@ -147,10 +147,10 @@
                     </div >
                     <div class="form">
                         <label for="">Message</label>
-                        <textarea name="user-message" id="" cols="20"></textarea>
+                        <textarea name="user-message" id="message" cols="20"></textarea>
                     </div>
                     <div class="contact-btn">
-                        <input type="button" value="Envoyer">
+                        <input type="button" id='send-btn' value="Envoyer">
                     </div>
                     
                 </form>
@@ -161,7 +161,7 @@
             <li>Mentions légales</li>
         </ul>
     </footer>
-    <script src="https://smtpjs.com/v3/"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
