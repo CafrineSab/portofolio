@@ -36,3 +36,22 @@ portofolioHover.forEach(el => {
         })
     })
 })
+
+//SMTPJS -- ENVOI MAIL FORMULAIRE
+
+let sendForm = document.getElementById('send-btn');
+
+sendForm.addEventListener('click', (event) => {
+  event.preventDefault();
+  
+  Email.send({
+    Host : "smtp.gmail.com",
+    Username : "sabmhadji@gmail.com",
+    Password : "Mariam12",
+    To : 'sabmhadji@gmail.com',
+    From : document.getElementById('name').value,
+    Body : document.getElementById('message').value
+}).then(
+  message => alert(message)
+);
+})
