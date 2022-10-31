@@ -46,10 +46,11 @@ sendForm.addEventListener('click', (event) => {
   console.log(document.getElementById('email').value);
 
   let email = document.getElementById('email').value
+  let name = document.getElementById('name').value
 
-  sendEmail(email);
+  sendEmail(email, name);
 
-  function sendEmail(email) {
+  function sendEmail(email, name) {
     Email.send({
       Host : "smtp.elasticemail.com",
     Username : "sabmhadji@gmail.com",

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -135,11 +135,11 @@
                 <form action="" method="POST">
                     <div class="form">
                         <label for="">Nom</label>
-                        <input type="text" name="" id="name">
+                        <input type="text" name="name" id="name" required="required">
                     </div>
                     <div class="form">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" required>
                     </div>
                     <div class="form">
                         <label for="">Téléphone</label>
@@ -147,12 +147,11 @@
                     </div >
                     <div class="form">
                         <label for="">Message</label>
-                        <textarea name="user-message" id="message" cols="20"></textarea>
+                        <textarea name="user-message" id="message" cols="20" required></textarea>
                     </div>
                     <div class="contact-btn">
-                        <input type="button" id='send-btn' value="Envoyer">
+                        <input type="submit" id='send-btn' value="Envoyer">
                     </div>
-                    
                 </form>
             </div>
         </section>
