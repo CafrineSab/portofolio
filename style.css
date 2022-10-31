@@ -4,7 +4,8 @@
 :root {
     --lightGrey : #f7f1ed;
     --orangePink: #febeb0;
-    --green : #3d5a5b;
+    --orange: #FF7043;
+    --green : #555555;
     --blueViolet:#2f365f;
     --whiteColor : #fff;
     --black: #000;
@@ -57,7 +58,9 @@ a, a:hover, a:focus, a:active {
 .menu-wrap {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 100%;
+
 }
 
 .logo {
@@ -65,7 +68,7 @@ a, a:hover, a:focus, a:active {
     font-weight: bold;
     font-size: 1.2rem;
     text-align: center;
-    color: var(--orangePink);
+    color: var(--orange);
 }
 
 .sticky {
@@ -85,12 +88,12 @@ a, a:hover, a:focus, a:active {
     display: flex;
     align-items: center;
     width: 40%;
-    height: 3rem;
+    height: 2.5rem;
 }
 
 .menu-list {
     list-style: none;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -98,21 +101,30 @@ a, a:hover, a:focus, a:active {
 
 .menu-list li {
     transition: all 0.3s;
-    padding: 10px 20px;
+    padding: 5px 20px;
     color: var(--whiteColor);
 }
 
+.menu-list-contact {
+    color: var(--orange) !important;
+    font-weight: bold;
+    border: 1px solid var(--orange);
+    border-radius: 5px;
+}
+
+.menu-list-contact:hover {
+    background-color: var(--orange);
+    color: var(--lightGrey) !important;
+}
 .menu-list li:hover {
     cursor: pointer;
-    color: var(--lightGrey);
-    background-color: var(--green);
+    color: var(--orange);
     border-radius: 5px;
-    padding: 10px 20px;
 }
 
 .hero {
     width: 100%;
-    height: 70vh;
+    height: 500px;
     background-size: cover;
     position: relative;
     display: flex;
@@ -131,7 +143,7 @@ a, a:hover, a:focus, a:active {
     justify-content: center;
     flex-direction: column;
     position: absolute;
-    top: 40px;
+    top: 140px;
 }
 
 .presentation {
@@ -160,20 +172,21 @@ a, a:hover, a:focus, a:active {
 }
 
 .hero-text {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     line-height: 1.5;
     margin-bottom: 30px;
-    color: var(--blueViolet);
+    color: var(--lightGrey);
+    text-align: center;
 }
 
 .hero-text span {
-    color: var(--green);
+    color: var(--orange);
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .techno {
-    color: var(--green);
+    color: var(--orange);
     font-weight: bold;
     font-size: 1.5rem;
     margin: 10px 0;
@@ -185,14 +198,14 @@ a, a:hover, a:focus, a:active {
 }
 
 .cta button {
-    width: 100%;
+    width: 80%;
     font-family: var(--fontText);
     font-size: 1.5rem;
     font-weight: bold;
-    background-color: var(--blueViolet);
+    background-color: var(--orange);
     border: none;
     border-radius: 10px;
-    color: #ffffff;
+    color: var(--lightGrey);
     padding: 15px;
 
 }
@@ -231,6 +244,8 @@ a, a:hover, a:focus, a:active {
 
 .about-me img {
     margin-bottom: 20px;
+    border-radius: 8px;
+    width: 300px;
 }
 
 .about-me p {
@@ -384,7 +399,7 @@ input {
     border-radius: 10px;
     border: none;
     background-color: transparent;
-    border-bottom: 1.5px solid var(--orangePink);
+    border-bottom: 1.5px solid var(--orange);
     outline: none;
     padding: 10px;
     font-size: 1.1rem;
@@ -396,7 +411,7 @@ textarea {
     border-radius: 10px;
     background-color: transparent;
     border: none;
-    border-bottom: 1.5px solid var(--orangePink);
+    border-bottom: 1.5px solid var(--orange);
     outline: none;
     padding: 10px;
     font-size: 1.1rem;
@@ -414,17 +429,16 @@ textarea {
     font-size: 1rem;
     font-weight: bold;
     margin: 15px;
-    background-color: lightcoral;
     border: none;
     border-radius: 30px;
     width: 80%;
-    color: #ffffff;
+    background-color: var(--orange) !important;
 }
 
 .contact-btn input:hover {
     cursor: pointer;
-    background-color: antiquewhite;
-    color: lightcoral;
+    background-color: var(--orangePink) !important;
+    transition: background-color 0.4s;
 }
 
 form {
@@ -452,7 +466,7 @@ form {
 
     .hero {
         width: 100%;
-        height: 60vh;
+        height: 450px;
     }
 
     .cta button {
@@ -522,26 +536,22 @@ form {
 
 /* Large devices (desktops, 992px and up)*/
 
-@media (min-width: 992px) {}
-
-/* Extra large devices (large desktops, 1200px and up) */
-
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
     h1 {
         font-size: 3.2em;
     }
 
     .hero {
         width: 100%;
-        height: 100vh;
+        height: 500px;
     }
 
     .cta button {
         width: 100%;
-        font-size: 2.4rem;
+        font-size: 1.8rem;
         border-radius: 15px;
         color: #ffffff;
-        padding: 20px 45px;
+        padding: 10px 45px;
     }
 
     .presentation {
@@ -601,6 +611,14 @@ form {
         margin-left: 30px;
     }
 
+    .realisation {
+        width: 80%;
+    }
+
+    .portofolio {
+        height: 300px;
+    }
+
     .footer-text {
         font-size: 1.8rem;
     }
@@ -621,3 +639,14 @@ form {
     }
 }
 
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+    .realisation {
+        width: 80%;
+    }
+
+    .portofolio {
+        height: 300px;
+    }
+}

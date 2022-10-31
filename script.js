@@ -1,11 +1,11 @@
 //------ STICKY MENU --------------
 let stickyMenu = document.querySelector('.menu-wrap');
 
-console.log(window.pageYOffset)
+console.log(window.scrollY)
 console.log(stickyMenu)
 
 function myFunction() {
-    if (window.pageYOffset >= 60) {
+    if (window.scrollY >= 70) {
       stickyMenu.classList.add("sticky")
     } else {
       stickyMenu.classList.remove("sticky")
@@ -13,7 +13,6 @@ function myFunction() {
   }
 
   window.onscroll = function() {myFunction()}
-
 
 
 let portofolioHover = document.querySelectorAll('.portofolio');
@@ -35,4 +34,32 @@ portofolioHover.forEach(el => {
             i.classList.remove('show-title')
         })
     })
+})
+
+//SMTPJS -- ENVOI MAIL FORMULAIRE
+
+let sendForm = document.getElementById('send-btn');
+
+sendForm.addEventListener('click', (event) => {
+  event.preventDefault();
+  console.log('click');
+  console.log(document.getElementById('email').value);
+
+  let email = document.getElementById('email').value
+
+  sendEmail(email);
+
+  function sendEmail(email) {
+    Email.send({
+      Host : "smtp.elasticemail.com",
+    Username : "sabmhadji@gmail.com",
+    Password : "BA14902E0CBD65453D8629C14066E806C71B",
+    To : "diallosabourata@gmail.com",
+    From : 'sabmhadji@gmail.com',
+    Subject : "This is the subject",
+    Body : document.getElementById('message').value + document.getElementById('name').value
+}).then(
+  message => alert(message)
+);
+  }
 })

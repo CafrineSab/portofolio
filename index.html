@@ -17,8 +17,8 @@
             <nav class="menu">
                 <ul class="menu-list">
                     <li><a href="#mes-realisations">Portofolio</a></li>
-                    <li>Menu 2</li>
-                    <li>Menu 3</li>
+                    <li>Menu</li>
+                    <li class="menu-list-contact"><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,12 +28,12 @@
                  <div class="presentation">
                      <div class="presentation-wrap">
                          <div class="pres-title">
-                             <div class="hero-title">
+                            <!-- <div class="hero-title">
                                 <h1>Bonjour </h1>
                                 <img src="images/hello.png" width="100px" alt=""> 
-                             </div>
+                             </div> -->
                          <div class="hero-text">
-                             <p>Je m'appelle <span>Sabourata  DIALLO</span> développeur front-end</p>
+                             <p><span>Sabourata  DIALLO</span> développeur front-end</p>
                              <p class="techno">HTML- CSS - Javascript</p>
                          </div>                   
                          </div>  
@@ -56,8 +56,8 @@
         <h1>Qui suis-je ?</h1>
         <div class="about-wrap">
             <div class="about-me">
-                <img src="images/ben-kolde-bs2Ba7t69mM-unsplash.jpg" width="200px" height="auto" alt="">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, necessitatibus ab? Minima velit quam iure commodi inventore corrupti, amet pariatur sequi debitis, incidunt corporis sit assumenda perferendis rem voluptatem adipisci aliquam fugit eaque ullam dolore consectetur necessitatibus itaque?</p>
+                <img src="images/ben-kolde-bs2Ba7t69mM-unsplash.jpg" alt="">
+                <p>Professionnellement parlant, j'ai eu plusieurs vie. Le point commun avec les différentes activités que j'ai pu avoir c'est goût du travail bien fait. <br> Je suis spécialisé dans le développement de site et d'application web.</p>
             </div>
         </div>
     </section>
@@ -123,34 +123,34 @@
         </div>
     </section>
 
-    <footer>
+    <footer id="contact">
         <div class="footer-img">
             <img src="images/thankyou.png" width="250px" alt="">
         </div>
         <div>
             <p class="footer-text">N'hésitez pas à me contacter, je suis à votre disposition pour plus d'informations.</p>
         </div>
-        <section class="contact">
+        <section  class="contact">
             <div class="contact-wrap">
-                <form action="">
+                <form action="" method="POST">
                     <div class="form">
                         <label for="">Nom</label>
-                        <input type="text" name="" id="">
+                        <input type="text" name="name" id="name">
                     </div>
                     <div class="form">
-                        <label for="">Email</label>
-                        <input type="text" name="" id="">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email">
                     </div>
                     <div class="form">
                         <label for="">Téléphone</label>
-                        <input type="text" name="" id="">
+                        <input type="text" name="telephone" id="telephone">
                     </div >
                     <div class="form">
                         <label for="">Message</label>
-                        <textarea name="user-message" id="" cols="20"></textarea>
+                        <textarea name="user-message" id="message" cols="20"></textarea>
                     </div>
                     <div class="contact-btn">
-                        <input type="button" value="Envoyer">
+                        <button type="submit" id='send-btn'>Envoyer</button>
                     </div>
                     
                 </form>
@@ -161,6 +161,7 @@
             <li>Mentions légales</li>
         </ul>
     </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
