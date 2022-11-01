@@ -39,20 +39,14 @@ portofolioHover.forEach(el => {
 //SMTPJS -- ENVOI MAIL FORMULAIRE
 
 let sendForm = document.getElementById('send-btn');
+let email = document.getElementById('email')
+let formName = document.getElementById('name')
+let telephone = document.getElementById('telephone');
+let message = document.getElementById('message')
 
-sendForm.addEventListener('click', (event) => {
-  event.preventDefault();
-  console.log('click');
-  console.log(document.getElementById('email').value);
-
-  let email = document.getElementById('email').value
-  let name = document.getElementById('name').value
-
-  sendEmail(email, name);
-
-  function sendEmail(email, name) {
-    Email.send({
-      Host : "smtp.elasticemail.com",
+function sendEmail(email, formName) {
+  Email.send({
+    Host : "smtp.elasticemail.com",
     Username : "sabmhadji@gmail.com",
     Password : "BA14902E0CBD65453D8629C14066E806C71B",
     To : "diallosabourata@gmail.com",
@@ -62,5 +56,30 @@ sendForm.addEventListener('click', (event) => {
 }).then(
   message => alert(message)
 );
+}
+
+sendForm.addEventListener('click', (event) => {
+  event.preventDefault();
+  console.log('click');
+  console.log(email.value)
+
+  if(!email.value == '' && !formName.value == '' && !telephone.value =='' && !message.value == '') {
+    sendEmail(email, formName);
+    
+  } else {
+    if(formName.value == ''){
+      alert('Merci de préciser votre nom')
+    } 
+    if(email.value == ''){
+      alert('Merci de renseigner votre adresse email');
+    }
+    if(telephone.value == ''){
+      alert('Merci de préciser votre numéro de téléphone')
+    } 
+    if(message.value == ''){
+      alert('Pouvez-vous préciser vos besoins ?')
+    } 
+    
   }
+ 
 })
