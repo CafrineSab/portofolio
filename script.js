@@ -39,12 +39,17 @@ portofolioHover.forEach(el => {
 //SMTPJS -- ENVOI MAIL FORMULAIRE
 
 let sendForm = document.getElementById('send-btn');
-let email = document.getElementById('email')
-let formName = document.getElementById('name')
+let email = document.getElementById('email');
+let formName = document.getElementById('name');
 let telephone = document.getElementById('telephone');
-let message = document.getElementById('message')
+let message = document.getElementById('message');
+let errorName = document.querySelector('.error-name');
+let errorMail = document.querySelector('.error-email');
+let errorPhone = document.querySelector('.error-phone');
+let errorMessage = document.querySelector('.error-message');
 
-function sendEmail(email, formName) {
+
+function sendEmail() {
   Email.send({
     Host : "smtp.elasticemail.com",
     Username : "sabmhadji@gmail.com",
@@ -52,7 +57,7 @@ function sendEmail(email, formName) {
     To : "diallosabourata@gmail.com",
     From : 'sabmhadji@gmail.com',
     Subject : "This is the subject",
-    Body : document.getElementById('message').value + document.getElementById('name').value
+    Body : `Nom : ${formName.value} <br/> Email: ${email} <br/> Téléphone: ${telephone} <br/> Message: ${message}`
 }).then(
   message => alert(message)
 );
@@ -64,22 +69,22 @@ sendForm.addEventListener('click', (event) => {
   console.log(email.value)
 
   if(!email.value == '' && !formName.value == '' && !telephone.value =='' && !message.value == '') {
-    sendEmail(email, formName);
+    console.log('je suis la!!!')
+    sendEmail();
     
   } else {
     if(formName.value == ''){
-      alert('Merci de préciser votre nom')
+      errorName.textContent = 'Merci de préciser votre nom'
     } 
     if(email.value == ''){
-      alert('Merci de renseigner votre adresse email');
+      errorMail.textContent = 'Merci de préciser votre email'
     }
     if(telephone.value == ''){
-      alert('Merci de préciser votre numéro de téléphone')
+      errorPhone.textContent = 'Merci de préciser votre n° de téléphone'
     } 
     if(message.value == ''){
-      alert('Pouvez-vous préciser vos besoins ?')
+      errorMessage.textContent = 'Merci de préciser votre message'
     } 
     
   }
- 
 })

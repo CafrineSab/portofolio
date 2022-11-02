@@ -8,6 +8,7 @@
     --green : #555555;
     --blueViolet:#2f365f;
     --whiteColor : #fff;
+    --red : #ff0000;
     --black: #000;
     --fontText: 'Poppins', sans-serif;
     --fontTitle : 'Rubik', sans-serif
@@ -394,6 +395,8 @@ footer {
 label {
     font-weight: bold;
     font-size: 1.1rem;
+    margin: 10px 0;
+    padding: 0;
 }
 
 input {
@@ -406,7 +409,6 @@ input {
     padding: 10px;
     font-size: 1.1rem;
     font-family: var(--fontText);
-    margin-bottom: 30px;
 }
 
 textarea {
@@ -445,6 +447,11 @@ textarea {
 
 form {
     width: 80%;
+}
+
+.error{
+    color: var(--red);
+    font-size: 0.9rem;
 }
 
 

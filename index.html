@@ -51,11 +51,6 @@
          </section>
 
     </header>
-    <form action="">
-        <label for="">CECI EST UN TEST</label>
-        <input type="text" name="" id="" required="required">
-        <input type="submit" value="Envoyer">
-    </form>
 
     <section class="about">
         <h1>Qui suis-je ?</h1>
@@ -141,18 +136,22 @@
                     <div class="form">
                         <label for="">Nom</label>
                         <input type="text" name="name" id="name" required="required">
+                        <p class="error error-name"></p>
                     </div>
                     <div class="form">
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" required>
+                        <p class="error error-email"></p>
                     </div>
                     <div class="form">
                         <label for="">Téléphone</label>
                         <input type="text" name="telephone" id="telephone">
+                        <p class="error error-phone"></p>
                     </div >
                     <div class="form">
                         <label for="">Message</label>
                         <textarea name="user-message" id="message" cols="20" required></textarea>
+                        <p class="error error-message"></p>
                     </div>
                     <div class="contact-btn">
                         <input type="submit" id='send-btn' value="Envoyer">
