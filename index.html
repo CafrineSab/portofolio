@@ -17,7 +17,6 @@
             <nav class="menu">
                 <ul class="menu-list">
                     <li><a href="#mes-realisations">Portofolio</a></li>
-                    <li>Menu</li>
                     <li class="menu-list-contact"><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
@@ -43,7 +42,7 @@
                      </div>
        
                      <div class="cta">
-                         <button>Contactez-moi</button>
+                        <a href="#contact"><button>Contactez-moi</button></a> 
                      </div>
                  </div>
      
@@ -66,7 +65,7 @@
             <h1>PORTOFOLIO</h1>
             <div class="realisation"> 
                 <div class="link">
-                    <a href="">
+                    <a href="./boulangerie/index.html" target="_blank">
                         <div class="portofolio site1">       
                             <div class="portofolio-title">
                                 <h3 class="title-portofolio"> Boulangerie</h3>
@@ -132,7 +131,7 @@
         </div>
         <section  class="contact">
             <div class="contact-wrap">
-                <form action="" method="POST">
+                <form action="" method="POST" id="form">
                     <div class="form">
                         <label for="">Nom</label>
                         <input type="text" name="name" id="name" required="required">
@@ -142,6 +141,7 @@
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" required>
                         <p class="error error-email"></p>
+                        <p class="regex"></p>
                     </div>
                     <div class="form">
                         <label for="">Téléphone</label>

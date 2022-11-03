@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins:ital,wght@0,300;0,400;1,300&family=Shadows+Into+Light&display=swap');
+
+:root {
+    --orange: #E85200;
+    --beigeClair : #FAF8EA;
+    --white: #fff;
+    --black: #000;
+    --fontTitleH1 : 'Open Sans', sans-serif;
+    --fontTitleh2 : 'Shadows Into Light', cursive;
+
+}
+
+
+/*
+    h1, h2, h3, h4, h5, h6 {
+        si on souhaite que tous les titres aient la même police
+        ex: font-family: var(--fontTitle);
+    }
+    h1 {
+        ex: font-size : 2.2rem --> tous les h1 auront cette taille
+        margin-bottom : 10px;
+    }
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-family: var(--fontTitleH1);
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-family: var(--fontTitleh2);
+    color: var(--orange);
+    font-size: 1.9rem;
+}
+
+.white-btn {
+    background-color: var(--white);
+    border: none;
+    padding: 20px;
+    width: 100px;
+    transition: all 0.3s;
+}
+
+.white-btn:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.order-btn{
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+.order-btn:hover {
+    background-color: var(--black);
+}
+
+.orange-btn {
+    background-color: var(--orange);
+    padding: 10px   ;
+}
+
+/* MOBILE MENU */
+header {
+    border: 1px solid blue;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mobile-menu {
+    border: 1px solid red;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    display: none;
+}
+
+.logo {
+    width: 30%;
+}
+
+.hamburger-menu {
+    height: 50px;
+}
+
+.hero {
+    background-image: url('images/bg1.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    width: 90%;
+    height: 100vh;
+    border: 1px solid red;
+}
+
+.hero-logo img {
+    width: 300px;
+}
+
+.hero-title h1{
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.hero-sous-titre {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-sous-titre h2 {
+    color: var(--white);
+    font-weight: 300;
+    text-align: center;
+    width: 70%;
+    font-size: 1.4rem;
+}
+
+.hero-btn {
+    width: 100%;
+    border: 1px solid blue;
+}
+
+.hero-btn button {
+    width: 100%;
+    font-family: var(--fontTitleH1);
+    font-size: 1.3rem;
+}
+
+.hero-services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blue;
+    width: 60%;
+}
+
+.services {
+    color: var(--white);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.services h3 {
+    color: var(--orange);
+}
+
+.services img {
+    width: 50px;
+}
+
+.services p {
+    text-align: center;
+}
+
+
+/* ----------- RESPONSIVE DESIGN ----------- */
+/*Important: Always put your media queries at the end of your CSS file.*/
+
+/* Small devices (landscape phones, 576px and up) */
+
+/* Mobile first --> min-width sinon maw-width */
+
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up)*/
+
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {}

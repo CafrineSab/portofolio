@@ -14,6 +14,7 @@ function myFunction() {
 
   window.onscroll = function() {myFunction()}
 
+//HOVER DU PORTOFOLIO
 
 let portofolioHover = document.querySelectorAll('.portofolio');
 let portofolioTitle = document.querySelectorAll('.portofolio-title')
@@ -47,6 +48,8 @@ let errorName = document.querySelector('.error-name');
 let errorMail = document.querySelector('.error-email');
 let errorPhone = document.querySelector('.error-phone');
 let errorMessage = document.querySelector('.error-message');
+let emailRegex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g);
+let phoneRegex = new RegExp(/^((\+)33|0)[1-9](\d{2}){4}$/g);
 
 
 function sendEmail() {
@@ -56,8 +59,8 @@ function sendEmail() {
     Password : "BA14902E0CBD65453D8629C14066E806C71B",
     To : "diallosabourata@gmail.com",
     From : 'sabmhadji@gmail.com',
-    Subject : "This is the subject",
-    Body : `Nom : ${formName.value} <br/> Email: ${email} <br/> Téléphone: ${telephone} <br/> Message: ${message}`
+    Subject : "Message reçu depuis le Portofolio",
+    Body : `Nom : ${formName.value} <br/> Email: ${email.value} <br/> Téléphone: ${telephone.value} <br/> Message: ${message.value}`
 }).then(
   message => alert(message)
 );
@@ -67,24 +70,40 @@ sendForm.addEventListener('click', (event) => {
   event.preventDefault();
   console.log('click');
   console.log(email.value)
+  console.log('verif email regex ', emailRegex.test(email.value))
+  console.log('verif phone regex ', phoneRegex.test(telephone.value))
 
-  if(!email.value == '' && !formName.value == '' && !telephone.value =='' && !message.value == '') {
+
+  if(!email.value == '' 
+    && emailRegex.test(email.value) === true 
+    && !formName.value == '' 
+    && !telephone.value =='' 
+    && phoneRegex.test(telephone.value) === true
+    && !message.value == '') {
     console.log('je suis la!!!')
     sendEmail();
-    
+    document.getElementById('form').reset();
+
   } else {
+    console.log('on est dans le else')
     if(formName.value == ''){
       errorName.textContent = 'Merci de préciser votre nom'
     } 
-    if(email.value == ''){
-      errorMail.textContent = 'Merci de préciser votre email'
+    if(email.value == '' || emailRegex.test(email.value) == false){
+      console.log('email else')
+      console.log(emailRegex.test(email.value))
+      errorMail.textContent = 'Merci de préciser votre email ou vérifier le format'
+     /* if(emailRegex.test(email.value) == false) {
+        document.querySelector('.regex').textContent = 'Le format mail est incorrect'
+      }*/
     }
-    if(telephone.value == ''){
-      errorPhone.textContent = 'Merci de préciser votre n° de téléphone'
+    if(telephone.value == '' || phoneRegex.test(telephone.value) == false){
+      console.log('telephone else')
+      console.log(phoneRegex.test(telephone.value))
+      errorPhone.textContent = 'Merci de préciser votre n° de téléphone ou le mettre au bon format'
     } 
     if(message.value == ''){
       errorMessage.textContent = 'Merci de préciser votre message'
     } 
-    
   }
 })
