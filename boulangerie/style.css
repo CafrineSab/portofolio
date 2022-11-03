@@ -5,6 +5,7 @@
     --beigeClair : #FAF8EA;
     --white: #fff;
     --black: #000;
+    --vertJaune : #D9DA4F;
     --fontTitleH1 : 'Open Sans', sans-serif;
     --fontTitleh2 : 'Shadows Into Light', cursive;
 
@@ -203,6 +204,7 @@ header {
 .main1 {
     display: flex;
     justify-content: center;
+    padding: 30px 0;
 }
 
 .main-wrap {
@@ -416,6 +418,90 @@ header {
 .main5 h2:hover {
     color: var(--orange);
 }
+
+.main6 {
+    background-image: linear-gradient(rgba(255, 69, 0, 0.8),rgba(255,69,0,0.8)) , url('images/map.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.main6 {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.main6-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main6-wrap h1 {
+    color: var(--white);
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+.main6-wrap h2 {
+    color: var(--white);
+    font-weight: 500;
+}
+
+.main6-btn {
+    width: 100%;
+    margin: 70px 0;
+}
+
+.main6-btn button {
+    width: 100%;
+}
+
+.main6-social {
+    display: flex;
+    align-items: center;
+}
+
+.main6-social img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.main6-adresse {
+    margin: 50px 0;
+    color: var(--white);
+}
+
+.main6-adresse h3{
+    color: var(--vertJaune);
+    margin-bottom: 30px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-wrap {
+    width: 80%;
+}
+
+.footer-menu {
+    display: flex;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.footer-menu-item:hover {
+    color: var(--orange);
+}
+
+.footer-bottom {
+    margin: 20px 0;
+    text-align: center;
+}
+
+
 
 /* ----------- RESPONSIVE DESIGN ----------- */
 /*Important: Always put your media queries at the end of your CSS file.*/
