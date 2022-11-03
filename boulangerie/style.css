@@ -43,13 +43,13 @@ li {
 
 h1 {
     font-family: var(--fontTitleH1);
-    font-size: 2.5rem;
+    font-size: 1.9rem;
 }
 
 h2 {
     font-family: var(--fontTitleh2);
     color: var(--orange);
-    font-size: 1.9rem;
+    font-size: 1.3rem;
 }
 
 .white-btn {
@@ -78,18 +78,19 @@ h2 {
 
 .orange-btn {
     background-color: var(--orange);
-    padding: 10px   ;
+    padding: 10px;
+    border: none;
 }
 
 /* MOBILE MENU */
 header {
-    border: 1px solid blue;
+    border: lpx solid blue solid blue;
     display: flex;
     justify-content: flex-end;
 }
 
 .mobile-menu {
-    border: 1px solid red;
+    border: lpx solid blue solid red;
     width: 80%;
     display: flex;
     align-items: center;
@@ -106,7 +107,7 @@ header {
 }
 
 .hero {
-    background-image: url('images/bg1.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.7)), url('images/bg1.jpg');
     background-position: center;
     background-size: cover;
     display: flex;
@@ -118,7 +119,13 @@ header {
 .hero-content {
     width: 90%;
     height: 100vh;
-    border: 1px solid red;
+}
+
+.hero-logo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero-logo img {
@@ -130,6 +137,8 @@ header {
     font-size: 1.6rem;
     font-weight: 300;
     text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.4;
 }
 
 .hero-sous-titre {
@@ -143,17 +152,17 @@ header {
     text-align: center;
     width: 70%;
     font-size: 1.4rem;
+    margin-bottom: 40px;
 }
 
 .hero-btn {
     width: 100%;
-    border: 1px solid blue;
 }
 
 .hero-btn button {
     width: 100%;
     font-family: var(--fontTitleH1);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .hero-services {
@@ -161,7 +170,6 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid blue;
     width: 60%;
 }
 
@@ -171,11 +179,12 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid red;
+    margin-bottom: 10px;
 }
 
 .services h3 {
     color: var(--orange);
+    margin-bottom: 20px;
 }
 
 .services img {
@@ -184,6 +193,100 @@ header {
 
 .services p {
     text-align: center;
+}
+
+.main1 {
+    display: flex;
+    justify-content: center;
+}
+
+.main-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+.main-title {
+    margin-bottom: 30px;
+}
+
+.main-title h1, h2{
+    text-align: center;
+}
+
+.main-text {
+    text-align: center;
+    line-height: 1.7;
+}
+
+.portrait {
+    margin: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portrait img {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.main2 {
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.7)), url('images/bg2.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main2-wrap {
+    background-color: var(--white);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.main2-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 110px);
+    grid-gap: 5px;
+    margin: 20px 0;
+    justify-content: center;
+    width: 90%;
+}
+
+.main2-title {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-items {
+    border-bottom: 1px solid var(--orange);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 90px;
+}
+
+.grid-items p {
+    text-align: center;
+}
+
+.main2-btn button {
+    transition: background-color 0.3s;
+}
+
+.main2-btn button:hover {
+    background-color: lightsalmon;
 }
 
 
