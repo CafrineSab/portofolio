@@ -90,18 +90,21 @@ h2 {
 
 /* MOBILE MENU */
 header {
-    border: lpx solid blue solid blue;
     display: flex;
     justify-content: flex-end;
 }
 
 .mobile-menu {
-    border: lpx solid blue solid red;
     width: 80%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     display: none;
+}
+
+.mobile-menu-logo {
+    display: flex;
+    justify-content: center;
 }
 
 .logo {
@@ -109,7 +112,20 @@ header {
 }
 
 .hamburger-menu {
+    height: 40px;
+    margin: 10px;
+}
+
+.sticky {
+    display: flex;
+    justify-content: center;
+    position: fixed;
     height: 50px;
+    top: 0;
+    width: 100%;
+    background-color: var(--white);
+    z-index: 1;
+    border: 1px solid red;
 }
 
 .hero {
