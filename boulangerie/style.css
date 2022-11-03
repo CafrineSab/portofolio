@@ -80,6 +80,11 @@ h2 {
     background-color: var(--orange);
     padding: 10px;
     border: none;
+    transition: all 0.3s;
+}
+
+.orange-btn:hover {
+    background-color: var(--black);
 }
 
 /* MOBILE MENU */
@@ -241,6 +246,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 30px 0;
 }
 
 .main2-wrap {
@@ -281,14 +287,135 @@ header {
     text-align: center;
 }
 
+.main2-btn {
+    width: 80%;
+}
+
+
 .main2-btn button {
     transition: background-color 0.3s;
+    color: var(--white);
+    width: 100%;
+    height: 50px;
+    font-size: 1.2rem;
 }
 
 .main2-btn button:hover {
     background-color: lightsalmon;
 }
 
+.main3 {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.main3-wrap {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main3-title {
+    margin: 20px 0;
+}
+
+.traiteur {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.traiteur h3 {
+    font-weight: bold;
+}
+
+.traiteur-item  {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.traiteur-item p {
+    font-weight: 300;
+}
+
+.traiteur-item span {
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.main3-btn {
+    margin: 30px 0;
+}
+
+.main3-btn button {
+    color: var(--white);
+    height: 70px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.main4 {
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.7)), url('images/bg3.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 50px 0;
+}
+
+.main4 h1 {
+    color: var(--white);
+    text-align: center;
+}
+
+.main4-btn {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    width: 100%;
+}
+
+.main4-btn button {
+    color: var(--white);
+    height: 60px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 80%;
+}
+
+.main5 {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main5-wrap {
+    border: 2px solid var(--orange);
+    width: 70%;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.main5-wrap h3 {
+    padding: 10px 0;
+    border-bottom: 1px solid grey;
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+.main5 h2 {
+    letter-spacing: 3px;
+    font-size: 2rem;
+    color: var(--black);
+    transition: all 0.3s;
+}
+
+.main5 h2:hover {
+    color: var(--orange);
+}
 
 /* ----------- RESPONSIVE DESIGN ----------- */
 /*Important: Always put your media queries at the end of your CSS file.*/
